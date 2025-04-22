@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambridgeMall-Hypermarket</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">Cambridge<span>Mall</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#supermarket">Supermarket</a></li>
+                    <li><a href="#hotel">Hotel</a></li>
+                    <li><a href="#pooltable">Pool Table</a></li>
+                    <li><a href="#cyber">Cyber Cafe</a></li>
+                    <li><a href="#chemist">Chemist</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <i>🛒</i>
+                <span>Cart (0)</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with 3D Effect -->
+    <section class="hero">
+        <div id="canvas-container"></div>
+        <div class="hero-content">
+            <h1>Welcome to CambridgeMall</h1>
+            <p>Your one-stop destination for shopping, dining, entertainment, and services.</p>
+            <a href="#services" class="cta-button">Explore Our Services</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Discover everything under one roof at CambridgeMall - from groceries to healthcare, entertainment to accommodation.</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Supermarket -->
+            <div id="supermarket" class="service-card">
+                <div class="service-image">
+                    <img src="images/market.jpg" alt="Supermarket">
+                </div>
+                <div class="service-content">
+                    <h3>Supermarket</h3>
+                    <p>Our fully-stocked supermarket offers a wide range of fresh produce, groceries, household items, and more at competitive prices.</p>
+                    <a href="#" class="service-link">Shop Now →</a>
+                </div>
+            </div>
+
+            <!-- Hotel -->
+            <div id="hotel" class="service-card">
+                <div class="service-image">
+                    <img src="images/hotel.jpg" alt="Hotel">
+                </div>
+                <div class="service-content">
+                    <h3>Hotel</h3>
+                    <p>Experience comfort and luxury at our hotel with modern amenities, excellent service, and convenient location.</p>
+                    <a href="#" class="service-link">Book Now →</a>
+                </div>
+            </div>
+
+            <!-- Pool Table -->
+            <div id="pooltable" class="service-card">
+                <div class="service-image">
+                    <img src="images/pool.jpg" alt="Pool Table">
+                </div>
+                <div class="service-content">
+                    <h3>Pool Table</h3>
+                    <p>Unwind and enjoy a game of pool with friends in our recreational area with professional pool tables.</p>
+                    <a href="#" class="service-link">Reserve Table →</a>
+                </div>
+            </div>
+
+            <!-- Cyber Cafe -->
+            <div id="cyber" class="service-card">
+                <div class="service-image">
+                    <img src="images/cyber.jpg" alt="Cyber Cafe">
+                </div>
+                <div class="service-content">
+                    <h3>Cyber Cafe</h3>
+                    <p>Stay connected with high-speed internet access, printing services, and computer workstations at our cyber cafe.</p>
+                    <a href="#" class="service-link">View Services →</a>
+                </div>
+            </div>
+
+            <!-- Chemist -->
+            <div id="chemist" class="service-card">
+                <div class="service-image">
+                    <img src="images/pharmacy.jpg" alt="Chemist">
+                </div>
+                <div class="service-content">
+                    <h3>Chemist</h3>
+                    <p>Our pharmacy provides prescription medications, over-the-counter drugs, health supplements, and professional advice.</p>
+                    <a href="#" class="service-link">Shop Medicines →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="products-container">
+            <div class="section-title">
+                <h2>Featured Products</h2>
+                <p>Explore our handpicked selection of quality products from across our marketplace.</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">New</span>
+                        <img src="images/product1.jpg" alt="Product">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Supermarket</div>
+                        <h3 class="product-title">Organic Fresh Fruits Basket</h3>
+                        <div class="product-price">
+                            <span class="price">Ksh 369.87</span>
+                            <button class="add-to-cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product2.jpg" alt="Product">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Hotel</div>
+                        <h3 class="product-title">Weekend Getaway Package</h3>
+                        <div class="product-price">
+                            <span class="price">Ksh 3000</span>
+                            <button class="add-to-cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">Sale</span>
+                        <img src="images/product3.jpg" alt="Product">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Pool Table</div>
+                        <h3 class="product-title">Single Pool Table Session</h3>
+                        <div class="product-price">
+                            <span class="price">Ksh 20</span>
+                            <button class="add-to-cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product4.jpg" alt="Product">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Cyber Cafe</div>
+                        <h3 class="product-title">Premium Internet Time ( Per Minute)</h3>
+                        <div class="product-price">
+                            <span class="price">Ksh 3</span>
+                            <button class="add-to-cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product5.jpg" alt="Product">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Chemist</div>
+                        <h3 class="product-title">Health Supplement Bundle</h3>
+                        <div class="product-price">
+                            <span class="price">Ksh 399.99</span>
+                            <button class="add-to-cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-tag">Hot</span>
+                        <img src="images/product6.jpg" alt="Product">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Supermarket</div>
+                        <h3 class="product-title">Weekly Grocery Pack</h3>
+                        <div class="product-price">
+                            <span class="price">Ksh 780.99</span>
+                            <button class="add-to-cart">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Hear from people who love shopping and using services at CambridgeMall.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The convenience of having everything under one roof is amazing. I can do my grocery shopping, grab lunch, and pick up medicines all in one visit!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/violah (2).png" alt="Customer">
+                        </div>
+                        <div class="author-info">
+                            <h4>Brian Martin</h4>
+                            <p>Regular Customer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The hotel rooms are incredibly comfortable and the staff is very friendly. It's my go-to place whenever I'm in town for business."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/violah (3).png" alt="Customer">
+                        </div>
+                        <div class="author-info">
+                            <h4>Faith Eregai</h4>
+                            <p>Business Traveler</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The cyber cafe has been a lifesaver during my laptop repairs. High-speed internet and printing services at reasonable prices!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/violah (1).png" alt="Customer">
+                        </div>
+                        <div class="author-info">
+                            <h4>Violah Chelagat</h4>
+                            <p>Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with the latest offers, new products, and exclusive deals.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#supermarket">Supermarket</a></li>
+                    <li><a href="#hotel">Hotel</a></li>
+                    <li><a href="#pooltable">Pool Table</a></li>
+                    <li><a href="#cyber">Cyber Cafe</a></li>
+                    <li><a href="#chemist">Chemist</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Customer Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Connect With Us</h3>
+                <p>Support: <a href="http://kellyvin.kesug.com/?i=1" style="color: rgb(28, 208, 231); text-decoration: none;">bit.ly/42MXALI</a></p>
+                <p>123 Kiptoi Street, Kachibora Town<br>Phone:<a href="tel:+254114895068" style="text-decoration: none;">254114895068</a><br>Email: kelkip5059@gmail.com</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">t</a>
+                    <a href="#" class="social-link">in</a>
+                    <a href="#" class="social-link">ig</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 CambridgeMall. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 3D Effect with Three.js
+        document.addEventListener('DOMContentLoaded', function() {
+            // Three.js setup
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            
+            const renderer = new THREE.WebGLRenderer({ alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.getElementById('canvas-container').appendChild(renderer.domElement);
+            
+            // Create 3D shapes representing different sections of the mall
+            const geometry1 = new THREE.BoxGeometry(2, 2, 2);
+            const geometry2 = new THREE.SphereGeometry(1.2, 32, 32);
+            const geometry3 = new THREE.ConeGeometry(1, 2, 32);
+            const geometry4 = new THREE.TorusGeometry(1, 0.4, 16, 100);
+            const geometry5 = new THREE.CylinderGeometry(1, 1, 2, 32);
+            
+            // Materials with different colors for different sections
+            const material1 = new THREE.MeshBasicMaterial({ color: 0x3498db, wireframe: true });
+            const material2 = new THREE.MeshBasicMaterial({ color: 0x2ecc71, wireframe: true });
+            const material3 = new THREE.MeshBasicMaterial({ color: 0xe74c3c, wireframe: true });
+            const material4 = new THREE.MeshBasicMaterial({ color: 0xf39c12, wireframe: true });
+            const material5 = new THREE.MeshBasicMaterial({ color: 0x9b59b6, wireframe: true });
+            
+            // Create mesh objects
+            const cube = new THREE.Mesh(geometry1, material1);
+            const sphere = new THREE.Mesh(geometry2, material2);
+            const cone = new THREE.Mesh(geometry3, material3);
+            const torus = new THREE.Mesh(geometry4, material4);
+            const cylinder = new THREE.Mesh(geometry5, material5);
+            
+            // Position the objects
+            cube.position.set(-4, 0, -5);
+            sphere.position.set(-2, 0, -5);
+            cone.position.set(0, 0, -5);
+            torus.position.set(2, 0, -5);
+            cylinder.position.set(4, 0, -5);
+            
+            // Add objects to the scene
+            scene.add(cube);
+            scene.add(sphere);
+            scene.add(cone);
+            scene.add(torus);
+            scene.add(cylinder);// Position camera
+            camera.position.z = 8;
+            
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                // Rotate all objects
+                cube.rotation.x += 0.01;
+                cube.rotation.y += 0.01;
+                
+                sphere.rotation.x += 0.01;
+                sphere.rotation.y += 0.01;
+                
+                cone.rotation.x += 0.01;
+                cone.rotation.y += 0.01;
+                
+                torus.rotation.x += 0.01;
+                torus.rotation.y += 0.01;
+                
+                cylinder.rotation.x += 0.01;
+                cylinder.rotation.y += 0.01;
+                
+                renderer.render(scene, camera);
+            }
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+            
+            // Start animation
+            animate();
+            
+            // Interactive elements for service sections
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const serviceId = this.id;
+                    console.log(`Service ${serviceId} clicked`);
+                    // You can add custom behavior for each service section
+                });
+            });
+        });
+
+        // Shopping Cart Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            let cartCount = 0;
+            const cartIcon = document.querySelector('.cart-icon');
+            const cartCountSpan = cartIcon.querySelector('span');
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            
+            // Add to cart functionality
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    cartCount++;
+                    updateCart();
+                    
+                    // Get product info
+                    const productCard = this.closest('.product-card');
+                    const productName = productCard.querySelector('.product-title').textContent;
+                    const productPrice = productCard.querySelector('.price').textContent;
+                    
+                    // Animate the button
+                    this.classList.add('adding');
+                    setTimeout(() => {
+                        this.classList.remove('adding');
+                    }, 500);
+                    
+                    // Show notification
+                    showNotification(`${productName} added to cart - ${productPrice}`);
+                });
+            });
+            
+            // Update cart count
+            function updateCart() {
+                cartCountSpan.textContent = `Cart (${cartCount})`;
+                
+                // Simple animation for cart icon
+                cartIcon.classList.add('pulse');
+                setTimeout(() => {
+                    cartIcon.classList.remove('pulse');
+                }, 500);
+            }
+            
+            // Cart icon click
+            cartIcon.addEventListener('click', function() {
+                alert('Shopping Cart: ' + cartCount + ' items');
+                // In a real implementation, this would open the cart modal
+            });
+            
+            // Notification system
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.textContent = message;
+                
+                // Style the notification
+                Object.assign(notification.style, {
+                    position: 'fixed',
+                    bottom: '20px',
+                    right: '20px',
+                    backgroundColor: 'var(--secondary)',
+                    color: 'white',
+                    padding: '10px 20px',
+                    borderRadius: '5px',
+                    boxShadow: '0 3px 10px rgba(0, 0, 0, 0.2)',
+                    zIndex: '1000',
+                    transition: 'all 0.3s ease',
+                    opacity: '0',
+                    transform: 'translateY(20px)'
+                });
+                
+                document.body.appendChild(notification);
+                
+                // Show notification with animation
+                setTimeout(() => {
+                    notification.style.opacity = '1';
+                    notification.style.transform = 'translateY(0)';
+                }, 10);
+                
+                // Hide and remove after 3 seconds
+                setTimeout(() => {
+                    notification.style.opacity = '0';
+                    notification.style.transform = 'translateY(20px)';
+                    
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 3000);
+            }
+        });
+
+        // Product Search Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create search bar
+            const header = document.querySelector('.header-container');
+            const searchContainer = document.createElement('div');
+            searchContainer.className = 'search-container';
+            
+            const searchBar = document.createElement('input');
+            searchBar.type = 'text';
+            searchBar.placeholder = 'Search products...';
+            searchBar.className = 'search-bar';
+            
+            // Style the search bar
+            Object.assign(searchBar.style, {
+                padding: '8px 15px',
+                borderRadius: '20px',
+                border: 'none',
+                margin: '10px 0',
+                width: '200px',
+                fontSize: '0.9rem'
+            });
+            
+            searchContainer.appendChild(searchBar);
+            header.insertBefore(searchContainer, document.querySelector('.cart-icon'));
+            
+            // Search functionality
+            searchBar.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const productCards = document.querySelectorAll('.product-card');
+                
+                productCards.forEach(card => {
+                    const productTitle = card.querySelector('.product-title').textContent.toLowerCase();
+                    const productCategory = card.querySelector('.product-category').textContent.toLowerCase();
+                    
+                    if (productTitle.includes(searchTerm) || productCategory.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Service Tabs Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create tabs container
+            const tabsContainer = document.createElement('div');
+            tabsContainer.className = 'tabs-container';
+            
+            // Style the tabs container
+            Object.assign(tabsContainer.style, {
+                display: 'flex',
+                justifyContent: 'center',
+                gap: '10px',
+                margin: '0 0 2rem 0'
+            });
+            
+            // Service categories
+            const categories = ['All', 'Supermarket', 'Hotel', 'Pool Table', 'Cyber Cafe', 'Chemist'];
+            
+            // Create tab for each category
+            categories.forEach(category => {
+                const tab = document.createElement('button');
+                tab.className = 'service-tab';
+                tab.textContent = category;
+                
+                // Style the tab
+                Object.assign(tab.style, {
+                    padding: '8px 16px',
+                    backgroundColor: category === 'All' ? 'var(--secondary)' : '#f1f5f9',
+                    color: category === 'All' ? 'white' : 'var(--dark)',
+                    border: 'none',
+                    borderRadius: '20px',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s'
+                });
+                
+                // Add event listener
+                tab.addEventListener('click', function() {
+                    // Update active tab style
+                    document.querySelectorAll('.service-tab').forEach(t => {
+                        t.style.backgroundColor = '#f1f5f9';
+                        t.style.color = 'var(--dark)';
+                    });
+                    this.style.backgroundColor = 'var(--secondary)';
+                    this.style.color = 'white';
+                    
+                    // Filter services
+                    filterServices(category);
+                });
+                
+                tabsContainer.appendChild(tab);
+            });
+            
+            // Insert tabs before services grid
+            const servicesSection = document.querySelector('.services');
+            const servicesGrid = document.querySelector('.services-grid');
+            servicesSection.insertBefore(tabsContainer, servicesGrid);
+            
+            // Filter function
+            function filterServices(category) {
+                const serviceCards = document.querySelectorAll('.service-card');
+                
+                serviceCards.forEach(card => {
+                    if (category === 'All') {
+                        card.style.display = 'block';
+                    } else {
+                        const cardTitle = card.querySelector('h3').textContent;
+                        if (cardTitle === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            }
+        });
+
+        // User Authentication System (Simplified)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create login/signup buttons
+            const header = document.querySelector('.header-container');
+            const authContainer = document.createElement('div');
+            authContainer.className = 'auth-container';
+            
+            // Style auth container
+            Object.assign(authContainer.style, {
+                display: 'flex',
+                gap: '10px',
+                alignItems: 'center'
+            });
+            
+            // Login button
+            const loginButton = document.createElement('button');
+            loginButton.textContent = 'Login';
+            loginButton.className = 'auth-button login';
+            
+            // Signup button
+            const signupButton = document.createElement('button');
+            signupButton.textContent = 'Sign Up';
+            signupButton.className = 'auth-button signup';
+            
+            // Style buttons
+            [loginButton, signupButton].forEach(button => {
+                Object.assign(button.style, {
+                    padding: '8px 16px',
+                    borderRadius: '20px',
+                    border: 'none',
+                    cursor: 'pointer',
+                    fontWeight: '500',
+                    transition: 'all 0.3s'
+                });
+            });
+            
+            // Different styles for login and signup
+            Object.assign(loginButton.style, {
+                backgroundColor: 'transparent',
+                color: 'white',
+                border: '1px solid white'
+            });
+            
+            Object.assign(signupButton.style, {
+                backgroundColor: 'var(--secondary)',
+                color: 'white'
+            });
+            
+            // Add hover effects
+            loginButton.addEventListener('mouseover', function() {
+                this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            });
+            
+            loginButton.addEventListener('mouseout', function() {
+                this.style.backgroundColor = 'transparent';
+            });
+            
+            signupButton.addEventListener('mouseover', function() {
+                this.style.backgroundColor = '#27ae60';
+            });
+            
+            signupButton.addEventListener('mouseout', function() {
+                this.style.backgroundColor = 'var(--secondary)';
+            });
+            
+            // Add buttons to container
+            authContainer.appendChild(loginButton);
+            authContainer.appendChild(signupButton);
+            
+            // Add container to header
+            header.appendChild(authContainer);
+            
+            // Login functionality
+            loginButton.addEventListener('click', function() {
+                showAuthModal('login');
+            });
+            
+            // Signup functionality
+            signupButton.addEventListener('click', function() {
+                showAuthModal('signup');
+            });
+            
+            // Auth modal function
+            function showAuthModal(type) {
+                // Create modal container
+                const modalOverlay = document.createElement('div');
+                modalOverlay.className = 'modal-overlay';
+                
+                // Style overlay
+                Object.assign(modalOverlay.style, {
+                    position: 'fixed',
+                    top: '0',
+                    left: '0',
+                    width: '100%',
+                    height: '100%',
+                    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    zIndex: '2000'
+                });
+                
+                // Create modal
+                const modal = document.createElement('div');
+                modal.className = 'auth-modal';
+                
+                // Style modal
+                Object.assign(modal.style, {
+                    backgroundColor: 'white',
+                    padding: '2rem',
+                    borderRadius: '10px',
+                    width: '90%',
+                    maxWidth: '400px',
+                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+                    position: 'relative'
+                });
+                
+                // Close button
+                const closeButton = document.createElement('button');
+                closeButton.innerHTML = '&times;';
+                closeButton.className = 'close-modal';
+                
+                // Style close button
+                Object.assign(closeButton.style, {
+                    position: 'absolute',
+                    top: '10px',
+                    right: '10px',
+                    background: 'none',
+                    border: 'none',
+                    fontSize: '1.5rem',
+                    cursor: 'pointer'
+                });
+                
+                // Modal title
+                const title = document.createElement('h2');
+                title.textContent = type === 'login' ? 'Login to Your Account' : 'Create an Account';
+                
+                // Style title
+                Object.assign(title.style, {
+                    marginBottom: '1.5rem',
+                    color: 'var(--dark)'
+                });
+                
+                // Create form
+                const form = document.createElement('form');
+                
+                // Email field
+                const emailGroup = document.createElement('div');
+                emailGroup.className = 'form-group';
+                
+                const emailLabel = document.createElement('label');
+                emailLabel.textContent = 'Email:';
+                emailLabel.htmlFor = 'email';
+                
+                const emailInput = document.createElement('input');
+                emailInput.type = 'email';
+                emailInput.id = 'email';
+                emailInput.required = true;
+                
+                // Password field
+                const passwordGroup = document.createElement('div');
+                passwordGroup.className = 'form-group';
+                
+                const passwordLabel = document.createElement('label');
+                passwordLabel.textContent = 'Password:';
+                passwordLabel.htmlFor = 'password';
+                
+                const passwordInput = document.createElement('input');
+                passwordInput.type = 'password';
+                passwordInput.id = 'password';
+                passwordInput.required = true;
+                
+                // Style form groups
+                [emailGroup, passwordGroup].forEach(group => {
+                    Object.assign(group.style, {
+                        marginBottom: '1.5rem'
+                    });
+                });
+                
+                // Style labels
+                [emailLabel, passwordLabel].forEach(label => {
+                    Object.assign(label.style, {
+                        display: 'block',
+                        marginBottom: '5px',
+                        fontWeight: '500'
+                    });
+                });
+                
+                // Style inputs
+                [emailInput, passwordInput].forEach(input => {
+                    Object.assign(input.style, {
+                        width: '100%',
+                        padding: '10px',
+                        borderRadius: '5px',
+                        border: '1px solid #ddd',
+                        fontSize: '1rem'
+                    });
+                });
+                
+                // Add email field
+                emailGroup.appendChild(emailLabel);
+                emailGroup.appendChild(emailInput);
+                form.appendChild(emailGroup);
+                
+                // Add password field
+                passwordGroup.appendChild(passwordLabel);
+                passwordGroup.appendChild(passwordInput);
+                form.appendChild(passwordGroup);
+                
+                // Submit button
+                const submitButton = document.createElement('button');
+                submitButton.type = 'submit';
+                submitButton.textContent = type === 'login' ? 'Login' : 'Sign Up';
+                
+                // Style submit button
+                Object.assign(submitButton.style, {
+                    backgroundColor: 'var(--primary)',
+                    color: 'white',
+                    padding: '10px',
+                    borderRadius: '5px',
+                    border: 'none',
+                    width: '100%',
+                    fontSize: '1rem',
+                    cursor: 'pointer',
+                    transition: 'background-color 0.3s'
+                });
+                
+                // Add submit button
+                form.appendChild(submitButton);
+                
+                // Add form to modal
+                modal.appendChild(closeButton);
+                modal.appendChild(title);
+                modal.appendChild(form);
+                
+                // Add modal to overlay
+                modalOverlay.appendChild(modal);
+                
+                // Add overlay to body
+                document.body.appendChild(modalOverlay);
+                
+                // Close modal on click
+                closeButton.addEventListener('click', function() {
+                    document.body.removeChild(modalOverlay);
+                });
+                
+                // Close modal on outside click
+                modalOverlay.addEventListener('click', function(e) {
+                    if (e.target === modalOverlay) {
+                        document.body.removeChild(modalOverlay);
+                    }
+                });
+                
+                // Form submission
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real application, this would handle actual authentication
+                    alert(`${type === 'login' ? 'Login' : 'Sign up'} successful!`);
+                    document.body.removeChild(modalOverlay);
+                    
+                    // Update UI to show logged in state
+                    updateAuthState(true);
+                });
+            }
+            
+            // Update authentication state
+            function updateAuthState(isLoggedIn) {
+                if (isLoggedIn) {
+                    // Remove login/signup buttons
+                    authContainer.innerHTML = '';
+                    
+                    // Create user account button
+                    const userAccount = document.createElement('div');
+                    userAccount.className = 'user-account';
+                    userAccount.innerHTML = '<span>My Account</span>';
+                    
+                    // Style user account
+                    Object.assign(userAccount.style, {
+                        display: 'flex',
+                        alignItems: 'center',
+                        backgroundColor: 'var(--secondary)',
+                        color: 'white',
+                        padding: '8px 16px',
+                        borderRadius: '20px',
+                        cursor: 'pointer'
+                    });
+                    
+                    // Add to auth container
+                    authContainer.appendChild(userAccount);
+                    
+                    // Show notification
+                    showWelcomeNotification();
+                }
+            }
+            
+            // Welcome notification
+            function showWelcomeNotification() {
+                const notification = document.createElement('div');
+                notification.className = 'welcome-notification';
+                notification.innerHTML = '<h3>Welcome to MetroMall!</h3><p>You\'re now logged in and ready to shop.</p>';
+                
+                // Style notification
+                Object.assign(notification.style, {
+                    position: 'fixed',
+                    top: '80px',
+                    right: '20px',
+                    backgroundColor: 'white',
+                    padding: '15px 20px',
+                    borderRadius: '5px',
+                    boxShadow: '0 5px 15px rgba(0, 0, 0, 0.2)',
+                    zIndex: '1000',
+                    maxWidth: '300px',
+                    transform: 'translateX(400px)',
+                    transition: 'transform 0.5s ease',
+                    borderLeft: '4px solid var(--secondary)'
+                });
+                
+                // Add to body
+                document.body.appendChild(notification);
+                
+                // Show notification
+                setTimeout(() => {
+                    notification.style.transform = 'translateX(0)';
+                }, 100);
+                
+                // Hide notification
+                setTimeout(() => {
+                    notification.style.transform = 'translateX(400px)';
+                    
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 500);
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+</html>
